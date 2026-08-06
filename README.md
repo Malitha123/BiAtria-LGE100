@@ -19,7 +19,7 @@ The dataset contains **100 paired three-dimensional late gadolinium enhancement 
 
 > The Figshare record is currently private. Replace the DOI, URL, licence, publication, and contact placeholders before public release.
 
-![Representative axial LGE-MRI slices from Utah_image_0090](Utah_image_0090_axial_slices.png)
+![Representative axial LGE-MRI slices from Utah_image_0090](docs/images/Utah_image_0090_axial_slices.png)
 
 *Representative axial slices from `Utah_image_0090.nii.gz`. Robust intensity clipping was used for display only.*
 
