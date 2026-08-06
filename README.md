@@ -10,7 +10,7 @@ Approximate Figshare download size: 1.39 GB
 Recommended use: non-clinical research and method development
 > The Figshare record is currently private. Replace the access and DOI placeholders in this README when the public or controlled-access record is released.
 <p align="center">
-  <img src="docs/images/Utah_image_0090_axial_slices.png" alt="Representative axial LGE-MRI slices from Utah_image_0090" width="100%">
+  <img src="Utah_image_0090_axial_slices.png" alt="Representative axial LGE-MRI slices from Utah_image_0090" width="100%">
 </p>
 <p align="center">
   Representative axial slices from <code>Utah_image_0090.nii.gz</code>. The display intensity has been clipped using robust percentiles for visualisation only.
