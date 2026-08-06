@@ -17,7 +17,6 @@ The dataset contains **100 paired three-dimensional late gadolinium enhancement 
 - **Approximate Figshare download size:** 1.39 GB
 - **Recommended use:** non-clinical research and method development
 
-> The Figshare record is currently private. Replace the DOI, URL, licence, publication, and contact placeholders before public release.
 
 ![Representative axial LGE-MRI slices from Utah_image_0090](docs/images/Utah_image_0090_axial_slices.png)
 
@@ -95,7 +94,6 @@ The cohort may be used for cross-cohort or external evaluation. Researchers must
 - adaptation;
 - final evaluation.
 
-Do not describe Waikato as an independent external test cohort when it has influenced model development.
 
 ### Image geometry
 
@@ -107,7 +105,6 @@ Observed or reported geometries include:
 | Additional Utah matrix size | `576 x 576 x 44` voxels |
 | Reported voxel spacing | `0.625 x 0.625 x 2.5 mm` |
 
-Geometry, affine matrices, orientation, voxel spacing, and data type should be checked for every image-label pair.
 
 ---
 
@@ -127,13 +124,11 @@ Valid label values:
 VALID_LABELS = {0, 1, 2, 3, 4}
 ```
 
-Use **nearest-neighbour interpolation** for segmentation masks. Other interpolation methods can create invalid intermediate class values.
 
 ---
 
 ## Directory structure
 
-The examples in this repository assume the following dataset structure:
 
 ```text
 Bi_Atrial_Segmentation_Data/
@@ -154,7 +149,6 @@ Bi_Atrial_Segmentation_Data/
 └── patient_image_mapping.csv
 ```
 
-The identifiers in `patient_image_mapping.csv` do not include the `.nii.gz` extension.
 
 ---
 
@@ -274,17 +268,8 @@ if not observed_labels.issubset(valid_labels):
     raise ValueError(f"Unexpected label values: {sorted(observed_labels)}")
 ```
 
-A complete runnable example is available in:
 
-```text
-examples/inspect_case.py
-```
 
-Run it with:
-
-```bash
-python examples/inspect_case.py   --data-root /path/to/Bi_Atrial_Segmentation_Data   --cohort Utah   --case-id 0090
-```
 
 ---
 
@@ -332,12 +317,6 @@ patient_rows = (
 print(patient_rows)
 ```
 
-Run the complete metadata example:
-
-```bash
-python examples/inspect_metadata.py   --data-root /path/to/Bi_Atrial_Segmentation_Data
-```
-
 ---
 
 ## Visualise an image and segmentation
@@ -377,13 +356,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-Run the complete visualisation script:
 
-```bash
-python examples/visualize_case.py   --data-root /path/to/Bi_Atrial_Segmentation_Data   --cohort Utah   --case-id 0090   --output Utah_0090_overlay.png
-```
-
----
 
 ## Validate the dataset
 
@@ -398,13 +371,7 @@ The audit script checks:
 - affine mismatches;
 - unexpected label values.
 
-Run:
 
-```bash
-python examples/audit_dataset.py   --data-root /path/to/Bi_Atrial_Segmentation_Data   --output BiAtria_LGE100_audit.csv
-```
-
-Review every row where `status` is not `ok`.
 
 ---
 
@@ -495,34 +462,7 @@ The original in-plane dimensions are large. Full-volume 3D training may require 
 
 ---
 
-## Recommended preprocessing
 
-Researchers should report:
-
-- orientation standardisation;
-- target voxel spacing;
-- image interpolation;
-- mask interpolation;
-- intensity clipping;
-- intensity normalisation;
-- cropping or padding;
-- patch or slice extraction;
-- augmentation;
-- postprocessing;
-- handling of varying matrix sizes;
-- handling of empty classes.
-
-Important requirements:
-
-1. Use affine matrices rather than assuming a fixed anatomical orientation.
-2. Apply equivalent spatial transformations to each image-label pair.
-3. Use nearest-neighbour interpolation for labels.
-4. Verify that resampled labels contain only `0, 1, 2, 3, 4`.
-5. Fix all preprocessing choices using development data only.
-
-LGE-MRI does not use a universal fixed intensity scale. Possible normalisation approaches include non-zero z-score normalisation, robust percentile clipping, histogram standardisation, and learned normalisation.
-
----
 
 ## Recommended evaluation protocol
 
@@ -530,25 +470,6 @@ LGE-MRI does not use a universal fixed intensity scale. Possible normalisation a
 2. Create validation folds only from Utah training patients.
 3. Keep the supplied Utah test patients completely held out.
 4. Use Waikato for external evaluation only when it has not influenced development.
-5. Report Utah and Waikato results separately.
-6. Report all four foreground classes separately.
-7. Account for repeated scans from the same patient.
-8. Report excluded cases and reasons.
-9. Include representative failure cases.
-10. Report confidence intervals or patient-level uncertainty where possible.
-
-Recommended metrics include:
-
-- Dice similarity coefficient;
-- Intersection over Union;
-- precision;
-- sensitivity or recall;
-- 95th-percentile Hausdorff distance;
-- average symmetric surface distance;
-- relative volume error;
-- calibration measures for probabilistic outputs.
-
-Pooled performance should not replace cohort-wise and class-wise reporting.
 
 ---
 
@@ -655,49 +576,5 @@ Associated publication:
 
 > **TASSNet: A Deep Learning Framework for Robust Bi-Atrial Segmentation for Assessing Structural Basis of Atrial Fibrillation**
 
-Replace this placeholder with the complete publication citation and DOI.
 
----
 
-## Licence and access
-
-Before public release, confirm:
-
-- permission to redistribute Utah images and masks;
-- permission to redistribute Waikato images and masks;
-- ethics and consent conditions;
-- institutional governance requirements;
-- restrictions in source-data and collaboration agreements;
-- whether commercial reuse is permitted.
-
-When open redistribution is not permitted, use a metadata-only Figshare record or an approved controlled-access process.
-
-Access statement template:
-
-```text
-BiAtria-LGE 100 is available through the University of Auckland
-Institutional Figshare repository at [FIGSHARE DOI]. Access is subject
-to the licence, ethics, privacy, governance, and data-sharing conditions
-described in the Figshare record.
-```
-
----
-
-## Repository files
-
-```text
-.
-├── README.md
-├── requirements.txt
-├── .gitignore
-├── docs/
-│   └── images/
-│       └── Utah_image_0090_axial_slices.png
-└── examples/
-    ├── common.py
-    ├── inspect_case.py
-    ├── inspect_metadata.py
-    ├── visualize_case.py
-    ├── audit_dataset.py
-    └── pytorch_dataset.py
-```
