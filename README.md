@@ -2,6 +2,7 @@
 
 ## A Multi-Centre 3D LGE-MRI Dataset for Bi-Atrial Wall and Cavity Segmentation in Atrial Fibrillation
 
+
 **BiAtria-LGE 100** is a curated multi-centre cardiac magnetic resonance imaging dataset for automated segmentation of the left and right atrial walls and cavities.
 
 The dataset contains **100 paired three-dimensional late gadolinium enhancement magnetic resonance imaging volumes and corresponding multi-class segmentation masks**.
@@ -22,7 +23,19 @@ The dataset contains **100 paired three-dimensional late gadolinium enhancement 
 
 *Representative axial slices from `Utah_image_0090.nii.gz`. Robust intensity clipping was used for display only.*
 
----
+
+
+## ⚠️ License and Citation Requirements
+
+>Please read the following terms carefully before downloading or using any contents of this repository. By using this data, you agree to these terms.
+
+### License and Usage Restrictions
+
+>We welcome the use of this data to test AI approaches. However, using the data or labels for commercialization or other purposes is strictly prohibited. Any other uses require contacting the team to obtain written permission.
+
+### Mandatory Citation Policy
+
+>Anyone using this data for training, testing, or publishing articles must include the correct citation. Failure to provide proper citation is a serious violation of our terms of use, and the authors hold no responsibility or liability for any academic, legal, or other consequences that result. Resharing this data or uploading it to third party sites is strictly prohibited.
 
 ## Table of contents
 
@@ -175,7 +188,7 @@ patient_ID_005,pre,Utah_image_0013,Utah_label_0013,Train
 
 The current mapping file describes the Utah cohort. Waikato rows should be added to a future metadata release when patient-level mapping can be shared.
 
----
+<!-- ---
 
 ## Installation
 
@@ -204,7 +217,7 @@ python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 ```
 
----
+--- -->
 
 ## Quick start
 
@@ -358,7 +371,7 @@ plt.show()
 
 
 
-## Validate the dataset
+<!-- ## Validate the dataset
 
 The audit script checks:
 
@@ -460,7 +473,7 @@ print(batch["label"].shape)
 
 The original in-plane dimensions are large. Full-volume 3D training may require patch sampling, mixed precision, gradient accumulation, or batch size 1.
 
----
+--- -->
 
 
 
