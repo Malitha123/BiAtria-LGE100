@@ -43,21 +43,15 @@ The dataset contains **100 paired three-dimensional late gadolinium enhancement 
 - [Segmentation labels](#segmentation-labels)
 - [Directory structure](#directory-structure)
 - [Metadata](#metadata)
-- [Installation](#installation)
 - [Quick start](#quick-start)
 - [Read a NIfTI image and label](#read-a-nifti-image-and-label)
 - [Read and query the metadata](#read-and-query-the-metadata)
 - [Visualise an image and segmentation](#visualise-an-image-and-segmentation)
-- [Validate the dataset](#validate-the-dataset)
-- [Create a patient-level validation split](#create-a-patient-level-validation-split)
-- [PyTorch example](#pytorch-example)
-- [Recommended preprocessing](#recommended-preprocessing)
 - [Recommended evaluation protocol](#recommended-evaluation-protocol)
 - [Intended and future uses](#intended-and-future-uses)
 - [Known limitations](#known-limitations)
 - [Ethics and responsible use](#ethics-and-responsible-use)
 - [Citation](#citation)
-- [Licence and access](#licence-and-access)
 
 ---
 
