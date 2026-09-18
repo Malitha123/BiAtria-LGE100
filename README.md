@@ -3,7 +3,7 @@
 ## A Multi-Centre 3D LGE-MRI Dataset for Bi-Atrial Wall and Cavity Segmentation in Atrial Fibrillation
 
 
-**BiAtria-LGE 100** is a curated multi-centre cardiac magnetic resonance imaging dataset for automated segmentation of the left and right atrial walls and cavities.
+**[BiAtria-LGE 100](https://auckland.figshare.com/articles/dataset/_b_BiAtria-LGE_100_Dataset_b_/33148751)** is a curated multi-centre cardiac magnetic resonance imaging dataset for automated segmentation of the left and right atrial walls and cavities.
 
 The dataset contains **100 paired three-dimensional late gadolinium enhancement magnetic resonance imaging volumes and corresponding multi-class segmentation masks**.
 
@@ -555,33 +555,24 @@ Researchers using this dataset must cite:
 1. the BiAtria-LGE 100 Figshare dataset record;
 2. the associated TASSNet publication listed under the Figshare record's related materials.
 
-### Dataset citation template
 
-```text
-Gunawardhana, M., et al. (2026).
-BiAtria-LGE 100: A Multi-Centre 3D LGE-MRI Dataset for Bi-Atrial
-Wall and Cavity Segmentation in Atrial Fibrillation.
-University of Auckland Institutional Figshare.
-DOI: [FIGSHARE DOI]
-```
 
 ### BibTeX template
 
 ```bibtex
-@dataset{gunawardhana2026biatrialge100,
-  author    = {Gunawardhana, Malitha and others},
-  title     = {BiAtria-LGE 100: A Multi-Centre 3D LGE-MRI Dataset for
-               Bi-Atrial Wall and Cavity Segmentation in Atrial Fibrillation},
-  year      = {2026},
-  publisher = {University of Auckland Institutional Figshare},
-  doi       = {[FIGSHARE DOI]},
-  url       = {[FIGSHARE URL]}
+@article{Gunawardhana2026,
+  author = {Malitha Gunawardhana and Gregory Sands and Mark Trew and Jichao Zhao},
+  title  = {BiAtria-LGE 100 Dataset},
+  year   = {2026},
+  month  = {9},
+  url    = {https://auckland.figshare.com/articles/dataset/_b_BiAtria-LGE_100_Dataset_b_/33148751},
+  doi    = {10.17608/k6.auckland.33148751.v1}
 }
 ```
 
 Associated publication:
 
-> **TASSNet: A Deep Learning Framework for Robust Bi-Atrial Segmentation for Assessing Structural Basis of Atrial Fibrillation**
+> **Gunawardhana, Malitha, et al. "TASSNet: A Deep Learning Framework for Robust Bi-Atrial Segmentation for Assessing Structural Basis of Atrial Fibrillation." International Workshop on Statistical Atlases and Computational Models of the Heart. Cham: Springer Nature Switzerland, 2025.**
 
 
 
