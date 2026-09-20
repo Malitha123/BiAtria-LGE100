@@ -570,10 +570,14 @@ Researchers using this dataset must cite:
 }
 ```
 
-Associated publication:
 
-> **Gunawardhana, Malitha, et al. "TASSNet: A Deep Learning Framework for Robust Bi-Atrial Segmentation for Assessing Structural Basis of Atrial Fibrillation." International Workshop on Statistical Atlases and Computational Models of the Heart. Cham: Springer Nature Switzerland, 2025.**
-> **Gunawardhana, Malitha, Gregory B. Sands, Mark L. Trew, and Jichao Zhao. "Multicentre bi-atrial segmentation from LGE-MRI for Atrial Fibrillation with a 2D and 3D framework." *Biomedical Signal Processing and Control* 129, Part B (2027): 111521.**
+## Associated Publications
 
+- **Gunawardhana, Malitha, et al.**  
+  “TASSNet: A Deep Learning Framework for Robust Bi-Atrial Segmentation for Assessing Structural Basis of Atrial Fibrillation.”  
+  *International Workshop on Statistical Atlases and Computational Models of the Heart*, Springer Nature Switzerland, 2025.
 
+- **Gunawardhana, Malitha, Gregory B. Sands, Mark L. Trew, and Jichao Zhao.**  
+  “Multicentre Bi-Atrial Segmentation from LGE-MRI for Atrial Fibrillation with a 2D and 3D Framework.”  
+  *Biomedical Signal Processing and Control* 129, Part B (2027): 111521.
 
